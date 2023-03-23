@@ -7,8 +7,30 @@ import Task from '../src/task.js'
 describe('Task', () => {
   it('should return a task instance from a string', () => {
     const task = Task.generateInstanceFromString(
-      '1 description 2000 Bike,Car 2020-01-01 2020-02-01'
+      '1;description;2000;Bike,Car;2020-01-01;2020-02-01'
     )
+
+    const expected = {
+      id: '1',
+      description: "description",
+      budget: "2000",
+      stores: ['Bike', 'Car'],
+      from: '2020-01-01',
+      to: '2020-02-01',
+    }
+
+    expect(task).to.be.deep.equal(expected)
+  })
+
+  it('should return an instance from the constructor', () => {
+    const task = new Task({
+      id: '1',
+      description: "description",
+      budget: "2000",
+      stores: ['Bike', 'Car'],
+      from: '2020-01-01',
+      to: '2020-02-01',
+    })
 
     const expected = {
       id: '1',
@@ -24,7 +46,7 @@ describe('Task', () => {
 
   it('should format the values', () => {
     const task = Task.generateInstanceFromString(
-      '1 description 2000 Bike,Car 2020-01-01 2020-02-01'
+      '1;description;2000;Bike,Car;2020-01-01;2020-02-01'
     ).formatted('pt-BR')
 
     
