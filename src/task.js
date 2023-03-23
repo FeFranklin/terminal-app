@@ -41,7 +41,8 @@ export default class Task {
 
   static generateInstanceFromString(text) {
     const FIELDS_SEPARATOR = ';'
-    const [id, description, budget, stores, from, to] = text.split(FIELDS_SEPARATOR)
+    const [id, description, budget, stores, from, to] =
+      text.split(FIELDS_SEPARATOR)
     const person = new Task({
       id,
       description,

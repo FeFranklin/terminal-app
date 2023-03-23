@@ -12,8 +12,8 @@ describe('Task', () => {
 
     const expected = {
       id: '1',
-      description: "description",
-      budget: "2000",
+      description: 'description',
+      budget: '2000',
       stores: ['Bike', 'Car'],
       from: '2020-01-01',
       to: '2020-02-01',
@@ -25,8 +25,8 @@ describe('Task', () => {
   it('should return an instance from the constructor', () => {
     const task = new Task({
       id: '1',
-      description: "description",
-      budget: "2000",
+      description: 'description',
+      budget: '2000',
       stores: ['Bike', 'Car'],
       from: '2020-01-01',
       to: '2020-02-01',
@@ -34,8 +34,8 @@ describe('Task', () => {
 
     const expected = {
       id: '1',
-      description: "description",
-      budget: "2000",
+      description: 'description',
+      budget: '2000',
       stores: ['Bike', 'Car'],
       from: '2020-01-01',
       to: '2020-02-01',
@@ -49,15 +49,14 @@ describe('Task', () => {
       '1;description;2000;Bike,Car;2020-01-01;2020-02-01'
     ).formatted('pt-BR')
 
-    
     const expected = {
       id: 1,
-      description: "description",
+      description: 'description',
       budget: new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
       }).format('2000'),
-      stores: "Bike e Car",
+      stores: 'Bike e Car',
       from: '01 de janeiro de 2020',
       to: '01 de fevereiro de 2020',
     }

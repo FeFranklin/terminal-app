@@ -1,6 +1,6 @@
-import { readFileSync } from "fs";
-const fileUrl = new URL("./../database.json", import.meta.url);
-const database = JSON.parse(readFileSync(fileUrl));
+import { readFileSync } from 'fs'
+const fileUrl = new URL('./../database.json', import.meta.url)
+const database = JSON.parse(readFileSync(fileUrl))
 import Task from './task.js'
 import TerminalController from './terminalController.js'
 import { save } from './repository.js'
@@ -13,7 +13,9 @@ terminalController.initialiseTerminal(database, DEFAULT_LANG)
 
 async function mainLoop() {
   try {
-    const answer = await terminalController.question('Would you like to add another task to the list?')
+    const answer = await terminalController.question(
+      'Would you like to add another task to the list?'
+    )
     if (answer === STOP_TERMINAL_KEY) {
       terminalController.closeTerminal()
       console.log('process finished!')

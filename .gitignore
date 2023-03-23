@@ -132,7 +132,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .reify-cache
-
+.repository.test
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/

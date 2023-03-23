@@ -1,1 +1,26 @@
-[{"id":1,"description":"task description 1","budget":"10000","stores":["motocicleta","Carro","Caminhao"],"from":"2009-01-01","to":"2020-11-26"},{"id":"2","description":"task description 2","budget":"200","stores":["navio"],"from":"1998-09-13","to":"2023-03-23"},{"id":"3","description":"task description 3","budget":"300","stores":["arezzo"],"from":"2022-03-24","to":"2022-03-25"}]
+[
+  {
+    "id": 1,
+    "description": "task description 1",
+    "budget": "10000",
+    "stores": ["motocicleta", "Carro", "Caminhao"],
+    "from": "2009-01-01",
+    "to": "2020-11-26"
+  },
+  {
+    "id": "2",
+    "description": "task description 2",
+    "budget": "200",
+    "stores": ["navio"],
+    "from": "1998-09-13",
+    "to": "2023-03-23"
+  },
+  {
+    "id": "3",
+    "description": "task description 3",
+    "budget": "300",
+    "stores": ["arezzo"],
+    "from": "2022-03-24",
+    "to": "2022-03-25"
+  }
+]
