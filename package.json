@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "npx mocha -w --parallel test/*.test.js",
-    "test:cov": "npx nyc npx mocha -r reify --parallel test/*.test.js",
+    "test:cov": "npx nyc npx mocha --parallel ./test/*.test.js",
     "start": "node src/index.js",
     "dev": "npx nodemon --ignore database.json --exec node --experimental-json-modules --experimental-top-level-await src/index.js",
     "format:check": "prettier --check .",

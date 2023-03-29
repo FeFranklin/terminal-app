@@ -5,7 +5,7 @@ const { expect } = chai
 import { save } from '../src/repository.js'
 import { readFile } from 'fs/promises'
 
-describe('Task', () => {
+describe('Repository', () => {
   it('should save a json file', async () => {
     const filePath = './../.repository.test/test.json'
     const { pathname: testFile } = new URL(filePath, import.meta.url)
